@@ -1,25 +1,92 @@
-# NativeWind Example
+# 🎩 Hangman Game 🎮
 
-Style your universal React app with Tailwind CSS classes. [NativeWind](https://www.nativewind.dev/) enables Tailwind CSS use in React Native apps.
+A **React Native** Hangman game that generates words and hints using the **OpenAI API**. Featuring dynamic word generation, smooth animations, and a stylish UI, this game brings an engaging experience to mobile users.
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+---
 
-## 🚀 How to use
+## 🚀 Features
 
-<!-- Setup instructions -->
+✅ **AI-Powered Word Generation** - Get random words and hints using OpenAI API  
+✅ **Interactive Gameplay** - Guess letters, avoid mistakes, and save the Hangman  
+✅ **SVG-Based Graphics** - Smooth and visually appealing Hangman rendering  
+✅ **Tailwind-Powered Styling** - NativeWind ensures a sleek and responsive UI  
+✅ **Optimized for Mobile** - Seamless performance on both Android and iOS  
 
-- Install with `yarn` or `npm install`.
-- Run `yarn start` or `npm run start` to try it out.
+---
 
-## 📝 Notes
+## 🛠️ Tech Stack
 
-<!-- Link to related Expo or library docs -->
+🔹 **React Native** - Cross-platform mobile app framework  
+🔹 **OpenAI API** - AI-powered word and hint generation  
+🔹 **NativeWind** - Tailwind CSS for seamless styling  
+🔹 **React Native SVG** - For rendering the Hangman figure  
 
-- This example replicates the [NativeWind Expo Router setup instructions](https://www.nativewind.dev/getting-started/expo-router) for NativeWind v4.
+---
+
+## 📥 Installation & Setup
+
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/yourusername/hangman-ai.git
+cd hangman-ai
+```
+
+### 2️⃣ Install Dependencies
+```sh
+npm install
+```
+_or_
+```sh
+yarn install
+```
+
+### 3️⃣ Set Up OpenAI API Key
+Create a `.env` file in the root directory and add:
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+### 4️⃣ Run the App
+For Android:
+```sh
+npm run android
+```
+For iOS:
+```sh
+npm run ios
+```
+
+---
+
+## 🎮 How to Play
+
+🎯 The game fetches a **random word and hint** from OpenAI.  
+🔤 Players **guess letters** one by one.  
+😱 Wrong guesses **add parts to the Hangman**.  
+🏆 Win by **guessing the word before the Hangman is fully drawn**!  
+
+---
+
+## 📸 Screenshots
+
+*Add screenshots of the game here*
+
+---
+
+## 🤝 Contributing
+
+🚀 Pull requests are welcome! For major changes, open an issue first to discuss ideas.  
+
+---
+
+## 📜 License
+
+📝 MIT License - See `LICENSE` for details.
+
+---
+
+## 📬 Contact
+
+📧 Reach out via [your email or GitHub profile].
+
+💙 Made with passion by **@drummerviswa** 🎶

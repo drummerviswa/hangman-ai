@@ -2,6 +2,7 @@ import { View } from "react-native";
 import React from "react";
 import Svg, { Ellipse, Line, Rect } from "react-native-svg";
 import { createAnimatableComponent } from "react-native-animatable";
+import { useColorScheme } from "nativewind";
 
 type ManFigureProps = {
   wrongWord: number;
@@ -25,9 +26,11 @@ const AnimatableEllipse = createAnimatableComponent(Ellipse);
 // 10 - LegsRight
 // Total 11 parts
 
-const shapeColor = "#000033";
 
-const ManFigure = ({ wrongWord = 12 }: ManFigureProps) => {
+const ManFigure = ({ wrongWord }: ManFigureProps) => {
+  const theme = useColorScheme();
+  
+  const shapeColor = theme.colorScheme !== "dark" ? "#000000" : "#FFFFFF";
   const Rope = (
     <AnimatableLine
       animation="fadeIn"
@@ -46,7 +49,7 @@ const ManFigure = ({ wrongWord = 12 }: ManFigureProps) => {
       cx="200"
       cy="150"
       rx="40"
-      ry="25"
+      ry="40"
       fill={shapeColor}
     />
   );
@@ -55,7 +58,7 @@ const ManFigure = ({ wrongWord = 12 }: ManFigureProps) => {
     <AnimatableRect
       animation="fadeIn"
       width="10"
-      height="50"
+      height="60"
       x="195"
       y="150"
       fill={shapeColor}
@@ -67,8 +70,8 @@ const ManFigure = ({ wrongWord = 12 }: ManFigureProps) => {
       animation="fadeIn"
       x1="200"
       y1="200"
-      x2="140"
-      y2="200"
+      x2="150"
+      y2="250"
       stroke={shapeColor}
       strokeLinecap="round"
       strokeWidth="10"
@@ -79,8 +82,8 @@ const ManFigure = ({ wrongWord = 12 }: ManFigureProps) => {
       animation="fadeIn"
       x1="200"
       y1="200"
-      x2="260"
-      y2="200"
+      x2="250"
+      y2="250"
       stroke={shapeColor}
       strokeLinecap="round"
       strokeWidth="10"
@@ -127,34 +130,34 @@ const ManFigure = ({ wrongWord = 12 }: ManFigureProps) => {
     </Svg>
   );
   const TopBar = (
-    <Rect fill={shapeColor} width="250" height="10" x="5" y="15" />
+    <Rect fill={shapeColor} width="280" height="10" x="5" y="15" />
   );
 
   const SideBar = (
     <Rect fill={shapeColor} width="10" height="350" x="20" y="0" />
   );
 
-  const Base = <Rect fill={shapeColor} width="250" height="40" x="0" y="350" />;
+  const Base = <Rect fill={shapeColor} width="350" height="40" x="0" y="350" />;
 
   return (
     <View>
       <Svg
         viewBox="0 0 300 400"
         preserveAspectRatio="xMinYMin meet"
-        width="140"
-        height="200"
+        width="240"
+        height="240"
       >
-        {wrongWord > 0 && Base}
-        {wrongWord > 1 && SideBar}
-        {wrongWord > 2 && TopBar}
-        {wrongWord > 3 && Rope}
-        {wrongWord > 4 && Head}
-        {wrongWord > 5 && Neck}
-        {wrongWord > 6 && HandsLeft}
-        {wrongWord > 7 && HandsRight}
-        {wrongWord > 8 && Body}
-        {wrongWord > 9 && LegsLeft}
-        {wrongWord > 10 && LegsRight}
+        {Base}
+        {SideBar}
+        {TopBar}
+        {wrongWord > 0 && Rope}
+        {wrongWord > 1 && Head}
+        {wrongWord > 2 && Neck}
+        {wrongWord > 3 && HandsLeft}
+        {wrongWord > 4 && HandsRight}
+        {wrongWord > 5 && Body}
+        {wrongWord > 6 && LegsLeft}
+        {wrongWord > 7 && LegsRight}
       </Svg>
     </View>
   );
