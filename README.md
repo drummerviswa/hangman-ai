@@ -1,8 +1,8 @@
-# 🧠 Hangman AI
+# <img src="assets/smile.png" width="60" height="60" /> Hangman AI
 
 Hangman AI is a mobile game that combines the classic Hangman word-guessing gameplay with the power of **Gemini AI** for dynamic word generation. Built using **React Native (Expo)** and a **Node.js + Express** backend.
 
-![Hangman AI Screenshot](/assets/screenshot.png)
+<img src="assets/screenshot.png" alt="Hangman AI" width="200"/>
 
 ---
 
