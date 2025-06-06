@@ -13,7 +13,7 @@ const Header = () => {
     />
   );
   return (
-    <View className="bg-primary px-4 py-2 rounded-b-xl flex justify-between items-center flex-row">
+    <View className="bg-primary px-4 py-2 flex justify-between items-center flex-row">
       <Text className="dark:text-white text-black text-center font-bold text-xl">
         Hangman
       </Text>
