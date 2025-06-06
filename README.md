@@ -34,9 +34,8 @@ cd hangman-ai
 ### 2. Frontend (Expo React Native)
 
 ```bash
-cd frontend
 npm install
-npx expo start
+npm start
 ```
 
 > Make sure you have Expo Go installed on your phone, or use an Android/iOS emulator.
@@ -71,7 +70,7 @@ npm start
 
 | Method | Endpoint         | Description                             |
 | ------ | ---------------- | --------------------------------------- |
-| POST   | `/generate-word` | Generate a new word + hint using Gemini |
+| POST   | `/gameData` | Generate a new word + hint using Gemini |
 
 ---
 
