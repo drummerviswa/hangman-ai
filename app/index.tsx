@@ -32,7 +32,7 @@ export default function Index() {
     setModalVisible(false); // Hide modal on new game
 
     try {
-      const response = await fetch("http://192.168.1.7:5000/gameData");
+      const response = await fetch("https://hangman-ai.onrender.com/gameData");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
